@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 33% 98%;
+    --foreground: 240 34% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 34% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 34% 14%;
+    --primary: 259 56% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 258 76% 96%;
+    --secondary-foreground: 259 56% 40%;
+    --muted: 250 30% 96%;
+    --muted-foreground: 240 11% 47%;
+    --accent: 258 90% 66%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 350 62% 53%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 245 25% 91%;
+    --input: 245 22% 87%;
+    --ring: 258 90% 66%;
+    --radius: 0.75rem;
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-page text-ink font-sans;
+    font-feature-settings: "cv11", "ss01";
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .page-gradient {
+    background:
+      radial-gradient(1200px 400px at 85% -10%, rgba(139, 92, 246, 0.08), transparent 60%),
+      radial-gradient(800px 300px at 10% -20%, rgba(103, 56, 200, 0.05), transparent 60%);
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(156, 152, 194, 0.35);
+    border-radius: 999px;
+  }
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 11px;
+  fill: #6b6b85;
+}
+.recharts-legend-item-text {
+  color: #6b6b85 !important;
+  font-size: 12px;
+}
